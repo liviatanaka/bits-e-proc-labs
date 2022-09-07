@@ -7,4 +7,3 @@ pytest
 requests
 python-slugify
 unicode
-git+https://github.com/insper-classroom/telementry-client-py
