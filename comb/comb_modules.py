@@ -159,3 +159,11 @@ def bin2hex(hex0, sw):
             hex0.next = "0001110"
 
     return instances()
+
+@block
+def bin2bcd(b, dig1, dig0):
+    @always_comb
+    def comb():
+       pass
+
+    return instances()
