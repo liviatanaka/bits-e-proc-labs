@@ -24,10 +24,10 @@ def toplevel(LEDR, SW, KEY, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, CLOCK_50, RESET_
     # ---------------------------------------- #
     # ula
     # ---------------------------------------- #
-    ic1 = adder(sw_s[0:4], sw_s[6:10], ledr_s[0:4], ledr_s[9])
+    # ic1 = adder(sw_s[0:4], sw_s[6:10], ledr_s[0:4], ledr_s[9])
 
-    ledr_unsigned = ConcatSignal(*reversed(ledr_s))
-    ic2 = bin2hex(HEX0, ledr_unsigned)
+    # ledr_unsigned = ConcatSignal(*reversed(ledr_s))
+    # ic2 = bin2hex(HEX0, ledr_unsigned)
 
     # ---------------------------------------- #
     # seq
@@ -35,7 +35,7 @@ def toplevel(LEDR, SW, KEY, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, CLOCK_50, RESET_
     # ic0 = dff(ledr_s[0], sw_s[0], key_s[0], RESET_N)
 
     # ----- Comentar o always_comb ------------#
-    # ic1 = contador(LEDR, key_s[0], RESET_N)
+    ic1 = contador(LEDR, key_s[0], RESET_N)
 
     # ----- Usar o always_comb ----------------#
     # ic2 = blinkLed(ledr_s[0], CLOCK_50, RESET_N)
